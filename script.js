@@ -1,19 +1,33 @@
-const text = "Computer Science Student | Machine Learning Enthusiast";
+// Mengubah latar belakang Navbar saat di-scroll
+const navbar = document.getElementById('navbar');
 
-let index = 0;
-
-function typeEffect() {
-
-    if(index < text.length){
-
-        document.getElementById("typing").textContent += text.charAt(index);
-
-        index++;
-
-        setTimeout(typeEffect,60);
-
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
     }
+});
 
-}
+// Animasi Fade-in saat elemen muncul di layar (Intersection Observer)
+const faders = document.querySelectorAll('.fade-in');
 
-typeEffect();
+const appearOptions = {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});

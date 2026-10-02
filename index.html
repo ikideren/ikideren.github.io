@@ -7,75 +7,117 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <nav>
-        <h2>Darren</h2>
-
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-content">
+            <h1 class="logo">Darren.</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="hero">
-        <h1>Hello, I'm <span>Darren</span></h1>
-        <p id="typing"></p>
-
-        <a href="#projects" class="btn">View Projects</a>
-    </div>
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-
-    <p>
-        I'm a Computer Science student at BINUS University who enjoys
-        learning Web Development, Machine Learning, and Artificial
-        Intelligence.
-    </p>
-</section>
-
-<section id="projects">
-
-    <h2>Projects</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Heart Analysis</h3>
-            <p>Machine Learning application to predict heart failure risk.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <!-- Ganti profile.jpg dengan nama file pas foto lu -->
+            <img src="profile.jpg" alt="Darren Profile" class="profile-img">
+            <h1>Hi, I'm Darren</h1>
+            <p>Computer Science Student at BINUS University</p>
+            <p class="tagline">Passionate about AI, Machine Learning & Software Development</p>
+            <a href="#projects" class="btn">View My Work</a>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Text Summarization</h3>
-            <p>Research comparing Indonesian text summarization methods.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-title fade-in">
+            <h2>About Me</h2>
         </div>
-
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>A simple responsive website built using HTML, CSS, and JavaScript.</p>
+        <div class="about-content fade-in">
+            <p>Saya adalah mahasiswa semester 4 jurusan Computer Science di BINUS University Alam Sutera. Saya memiliki ketertarikan yang besar dalam pengembangan Artificial Intelligence, Computer Vision, Natural Language Processing (NLP), serta Web Development. Selalu antusias untuk belajar teknologi baru dan memecahkan masalah melalui kode.</p>
+            <div class="skills">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C</span>
+                <span>JavaScript</span>
+                <span>SQL</span>
+                <span>TensorFlow / Keras</span>
+                <span>Computer Vision</span>
+                <span>NLP</span>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-title fade-in">
+            <h2>My Projects</h2>
+        </div>
+        <div class="project-grid">
+            
+            <div class="card fade-in">
+                <h3>Skinning-AI</h3>
+                <p>Aplikasi web berbasis AI untuk mendeteksi dan mengklasifikasikan penyakit kulit luar melalui foto sebagai edukasi diagnostik.</p>
+                <div class="tech-stack">Python, HTML, CSS, JS</div>
+                <a href="https://github.com/ikideren/Skinning-AI" target="_blank" class="repo-link">View Repository</a>
+            </div>
 
-</section>
+            <div class="card fade-in">
+                <h3>Traffic Detection (MOG2)</h3>
+                <p>Sistem Computer Vision menggunakan algoritma Background Subtraction (MOG2) untuk mendeteksi kendaraan pada frame video.</p>
+                <div class="tech-stack">Python, OpenCV</div>
+                <a href="https://github.com/ikideren/traffic-detection-mog2-CV" target="_blank" class="repo-link">View Repository</a>
+            </div>
 
-<section id="contact">
+            <div class="card fade-in">
+                <h3>Language Detection (NLP)</h3>
+                <p>Model pemrosesan bahasa alami (NLP) untuk mendeteksi dan mengklasifikasikan bahasa dari input teks.</p>
+                <div class="tech-stack">Python, NLP</div>
+                <a href="https://github.com/ikideren/Language-Detection-NLP" target="_blank" class="repo-link">View Repository</a>
+            </div>
 
-    <h2>Contact</h2>
+            <div class="card fade-in">
+                <h3>DormHunt</h3>
+                <p>Sistem pencarian akomodasi (kos/asrama) untuk mempermudah mahasiswa menemukan tempat tinggal yang sesuai preferensi.</p>
+                <div class="tech-stack">Java / Web</div>
+                <a href="https://github.com/ikideren/DormHunt" target="_blank" class="repo-link">View Repository</a>
+            </div>
 
-    <p>Email: your@email.com</p>
-    <p>GitHub: github.com/yourusername</p>
+            <div class="card fade-in">
+                <h3>VSTravel</h3>
+                <p>Platform sistem informasi travel dan pariwisata untuk memudahkan pencarian rute dan perencanaan perjalanan.</p>
+                <div class="tech-stack">Tech Stack</div>
+                <a href="https://github.com/ikideren/VSTravel" target="_blank" class="repo-link">View Repository</a>
+            </div>
 
-</section>
+            <div class="card fade-in">
+                <h3>H.A.N.A.F.I</h3>
+                <p>Sistem atau aplikasi berbasis kode yang dikembangkan untuk penyelesaian masalah spesifik secara efisien.</p>
+                <div class="tech-stack">Tech Stack</div>
+                <a href="https://github.com/ikideren/H.A.N.A.F.I" target="_blank" class="repo-link">View Repository</a>
+            </div>
 
-<footer>
-    <p>© 2026 Darren. Built with HTML, CSS & JavaScript.</p>
-</footer>
+            <div class="card fade-in">
+                <h3>Personal Portfolio</h3>
+                <p>Website portofolio interaktif dan responsif yang dibangun dari awal untuk memamerkan proyek-proyek Computer Science.</p>
+                <div class="tech-stack">HTML, CSS, JavaScript</div>
+                <a href="#" class="repo-link">You are here</a>
+            </div>
 
-<script src="script.js"></script>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Darren. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://github.com/ikideren" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
