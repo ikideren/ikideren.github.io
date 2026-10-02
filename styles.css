@@ -98,4 +98,8 @@ footer h2{max-width:14ch;margin-bottom:28px}
   nav li a{padding:7px 11px;font-size:14px}
 }
 @media(max-width:560px){.skills,.contacts{grid-template-columns:1fr}.brand b{font-size:15px}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+  .dot{animation:breathe-soft 3.2s ease-in-out infinite}
+}
+@keyframes breathe-soft{0%,100%{opacity:.55}50%{opacity:1}}
